@@ -1,29 +1,21 @@
-# Dependencies
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-.venv/
+# Compiled FST files
+*.hfst
+*.hfstol
 
-# HFST compiled files (optional - can be regenerated)
-# fst/compiled/*.hfst
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
 
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
-
-# Environment
-.env
-.env.local
+# Temporary
+*.tmp
+*.bak

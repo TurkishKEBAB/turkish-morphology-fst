@@ -1,57 +1,47 @@
-# trmorph-hfst
+# Turkish Morphology FST
 
 Türkiye Türkçesi için HFST tabanlı morfolojik analizör.
 
-## 🎯 Proje Amacı
+🚧 **Development in progress** 🚧
 
-Türkiye Türkçesi'nin isim ve fiil morfolojisini sonlu durum dönüştürücüleri (FST) kullanarak modelleme ve web servisi olarak sunma.
+## Proje Hakkında
 
-## 🛠️ Teknolojiler
+Bu proje, Türkiye Türkçesi'nin isim ve fiil morfolojisini Helsinki Finite-State Technology (HFST) kullanarak modellemeyi amaçlamaktadır.
 
-- **HFST** - Helsinki Finite-State Technology
-- **Python** - Backend API
-- **FastAPI** - Web framework
-
-## 📁 Proje Yapısı
+## Yapı
 
 ```
-trmorph-hfst/
+turkish-morphology-fst/
 ├── fst/
-│   ├── lexicon/     # Kök sözlükler (.lexc)
-│   ├── rules/       # Morfolojik kurallar (.twol)
-│   └── compiled/    # Derlenmiş FST dosyaları
-├── backend/
-│   ├── api/         # REST API endpoints
-│   ├── core/        # HFST wrapper
-│   └── tests/       # Unit tests
-├── frontend/        # Web arayüzü
-└── docs/            # Dokümantasyon
+│   ├── lexicon/    # Kök sözlükleri (.lexc)
+│   ├── rules/      # Morfofonemik kurallar (.twol)
+│   └── compiled/   # Derlenmiş FST dosyaları
+├── backend/        # Python API (FastAPI)
+├── frontend/       # Web arayüzü
+└── docs/           # Dokümantasyon
 ```
 
-## 🚀 Kurulum
+## Gereksinimler
 
-```bash
-# WSL gerekli (Windows)
-wsl --install
+- HFST (Helsinki Finite-State Technology)
+- Python 3.9+
+- WSL (Windows için)
 
-# HFST kurulumu
-sudo apt install hfst hfst-dev
+## Kurulum
 
-# Derleme
-make
-```
+Detaylı kurulum için: [docs/SETUP_GUIDE.md](docs/SETUP_GUIDE.md)
 
-## 📚 Referanslar
+## Referanslar
 
-- [TRmorph](https://github.com/coltekin/TRmorph) - Türkçe morfolojik analizör
-- [MorAz](https://github.com/berkeozenc/MorAz) - Azerbaycan Türkçesi analizör
-- [HFST](https://github.com/hfst/hfst) - Helsinki Finite-State Technology
+- [MorAz - Azerbaijani Turkish Morphology](https://github.com/berkeozenc/MorAz)
+- [TRmorph](https://github.com/coltekin/TRmorph)
+- [Google Turkish Morphology](https://github.com/google-research/turkish-morphology)
 
-## 👥 Katkıda Bulunanlar
+## Katkıda Bulunanlar
 
-- [@TurkishKEBAB](https://github.com/TurkishKEBAB)
-- [@berkeozenc](https://github.com/berkeozenc) - Danışman
+- Berke Özenç (Danışman)
+- [Sizin isminiz]
 
-## 📄 Lisans
+## Lisans
 
 MIT License

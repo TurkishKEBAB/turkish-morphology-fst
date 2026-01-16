@@ -1,6 +1,6 @@
-# FST Lexicon Files
+# Lexicon Dosyaları
 
-Bu klasör FST lexicon dosyalarını içerir.
+Bu klasör Türkçe kök sözlüklerini içerir.
 
 ## Dosyalar
 
@@ -17,11 +17,5 @@ Bu klasör FST lexicon dosyalarını içerir.
 LEXICON Root
 ev Noun ;
 kitap Noun ;
-
-LEXICON Noun
-+N:0 NounInfl ;
+gel Verb ;
 ```
-
-## Referans
-
-- [HFST LEXC Tutorial](https://github.com/hfst/hfst/wiki/HfstLexcAndTwolcTutorial)
