@@ -1,47 +1,21 @@
-# Turkish Morphology FST
+# Türkçe Morfolojik Analizör (HFST)
 
-Türkiye Türkçesi için HFST tabanlı morfolojik analizör.
-
-🚧 **Development in progress** 🚧
-
-## Proje Hakkında
-
-Bu proje, Türkiye Türkçesi'nin isim ve fiil morfolojisini Helsinki Finite-State Technology (HFST) kullanarak modellemeyi amaçlamaktadır.
+Berke Özenç danışmanlığında geliştirilen Türkiye Türkçesi morfolojik analizör projesi.
 
 ## Yapı
 
 ```
-turkish-morphology-fst/
-├── fst/
-│   ├── lexicon/    # Kök sözlükleri (.lexc)
-│   ├── rules/      # Morfofonemik kurallar (.twol)
-│   └── compiled/   # Derlenmiş FST dosyaları
-├── backend/        # Python API (FastAPI)
-├── frontend/       # Web arayüzü
-└── docs/           # Dokümantasyon
+fst/
+├── lexicon/    # Kök sözlükleri
+├── rules/      # Ses kuralları
+└── compiled/   # Derlenmiş FST
 ```
-
-## Gereksinimler
-
-- HFST (Helsinki Finite-State Technology)
-- Python 3.9+
-- WSL (Windows için)
 
 ## Kurulum
 
-Detaylı kurulum için: [docs/SETUP_GUIDE.md](docs/SETUP_GUIDE.md)
+→ [HFST Kurulum Rehberi](docs/SETUP_GUIDE.md)
 
 ## Referanslar
 
-- [MorAz - Azerbaijani Turkish Morphology](https://github.com/berkeozenc/MorAz)
-- [TRmorph](https://github.com/coltekin/TRmorph)
-- [Google Turkish Morphology](https://github.com/google-research/turkish-morphology)
-
-## Katkıda Bulunanlar
-
-- Berke Özenç (Danışman)
-- [Sizin isminiz]
-
-## Lisans
-
-MIT License
+- [MorAz](https://github.com/berkeozenc/MorAz) - Azerbaycan Türkçesi
+- [TRmorph](https://github.com/coltekin/TRmorph) - Türkiye Türkçesi

@@ -1,21 +1,14 @@
-# Lexicon Dosyaları
+# Kök Sözlükleri
 
-Bu klasör Türkçe kök sözlüklerini içerir.
+Türkçe kelime kökleri burada.
 
-## Dosyalar
-
-| Dosya | Açıklama |
-|-------|----------|
-| `nouns.lexc` | İsim kökleri |
-| `verbs.lexc` | Fiil kökleri |
-| `adjectives.lexc` | Sıfat kökleri |
-| `closed_class.lexc` | Kapalı sınıf kelimeler |
-
-## Format
+## Örnek Format
 
 ```lexc
 LEXICON Root
 ev Noun ;
-kitap Noun ;
 gel Verb ;
+
+LEXICON Noun
++Pl:ler # ;
 ```

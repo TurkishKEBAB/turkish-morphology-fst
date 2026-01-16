@@ -1,23 +1,13 @@
-# Morfofonemik Kurallar
+# Ses Kuralları
 
-Bu klasör ses değişim kurallarını içerir.
+Ünlü uyumu, ünsüz değişimleri vs. burada.
 
-## Dosyalar
-
-| Dosya | Açıklama |
-|-------|----------|
-| `phonology.twol` | Ses uyumu kuralları |
-| `nominal.twol` | İsim çekim kuralları |
-| `verbal.twol` | Fiil çekim kuralları |
-
-## Format (TWOLC)
+## Örnek Format
 
 ```twolc
 Alphabet
-  a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
-  A:a A:e  ! Büyük ünlü uyumu
-  I:ı I:i I:u I:ü  ! Küçük ünlü uyumu
-  D:d D:t  ! Ünsüz uyumu
+  a e ı i o ö u ü
+  A:a A:e  ! büyük ünlü uyumu
 ;
 
 Rules
