@@ -1,38 +1,19 @@
-# Byte-compiled / optimized / DLL files
+# Dependencies
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
-
-# Distribution / packaging
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
-venv/
-ENV/
 env/
+venv/
 .venv/
 
+# HFST compiled files (optional - can be regenerated)
+# fst/compiled/*.hfst
+
 # IDE
-.idea/
 .vscode/
+.idea/
 *.swp
 *.swo
 
@@ -40,17 +21,9 @@ env/
 .DS_Store
 Thumbs.db
 
-# Project specific
-fst/compiled/*.hfst
+# Logs
 *.log
+
+# Environment
 .env
 .env.local
-
-# Node
-node_modules/
-.next/
-out/
-*.tsbuildinfo
-
-# Docker
-docker-compose.override.yml

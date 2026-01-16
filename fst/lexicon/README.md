@@ -1,23 +1,27 @@
-# Turkish Morphology FST - Lexicon Files
+# FST Lexicon Files
 
-Bu dizin, HFST için lexicon (sözlük) dosyalarını içerir.
+Bu klasör FST lexicon dosyalarını içerir.
 
 ## Dosyalar
 
-- `nouns.lexc` - İsim kökleri
-- `verbs.lexc` - Fiil kökleri  
-- `affixes.lexc` - Ek tanımları
+| Dosya | Açıklama |
+|-------|----------|
+| `nouns.lexc` | İsim kökleri |
+| `verbs.lexc` | Fiil kökleri |
+| `adjectives.lexc` | Sıfat kökleri |
+| `closed_class.lexc` | Kapalı sınıf kelimeler |
 
 ## Format
 
-LEXC formatı kullanılmaktadır. Örnek:
-
 ```lexc
 LEXICON Root
-Nouns ;
-Verbs ;
+ev Noun ;
+kitap Noun ;
 
-LEXICON Nouns
-ev:ev NounSuffixes ;
-kitap:kitap NounSuffixes ;
+LEXICON Noun
++N:0 NounInfl ;
 ```
+
+## Referans
+
+- [HFST LEXC Tutorial](https://github.com/hfst/hfst/wiki/HfstLexcAndTwolcTutorial)

@@ -1,88 +1,57 @@
-# Turkish Morphology FST (Türkçe Biçimbilgisi FST)
+# trmorph-hfst
 
-Türkiye Türkçesi'nin isim ve çekimli fiil biçimbilgisini sonlu durum transdüserleri (FST) kullanarak tanımlayan production-ready web servisi.
+Türkiye Türkçesi için HFST tabanlı morfolojik analizör.
 
-## 🎯 Proje Hakkında
+## 🎯 Proje Amacı
 
-Bu proje, Helsinki Finite-State Technology (HFST) çatısı üzerinde Türkçe morfolojik analiz ve üretim işlemleri için bir web servisi geliştirmeyi amaçlamaktadır.
+Türkiye Türkçesi'nin isim ve fiil morfolojisini sonlu durum dönüştürücüleri (FST) kullanarak modelleme ve web servisi olarak sunma.
 
-### Temel Özellikler
+## 🛠️ Teknolojiler
 
-- **Nominal Paradigm**: İsim çekimleri için yuvalı (slot-based) yaklaşım
-- **Verbal Paradigm**: Fiil çekimleri için isteğe bağlı yollardan oluşan karma yaklaşım
-- **REST API**: Morfolojik analiz ve üretim için web servisi
-- **Modern Web UI**: Kullanıcı dostu arayüz
+- **HFST** - Helsinki Finite-State Technology
+- **Python** - Backend API
+- **FastAPI** - Web framework
 
-## 📊 FST Diyagramları
-
-Projenin FST state diyagramları aşağıda görülebilir:
-
-![FST Diagrams](docs/diagrams/fst_diagrams.png)
-
-## 🏗️ Proje Yapısı
+## 📁 Proje Yapısı
 
 ```
-turkish-morphology-fst/
-├── fst/                    # FST Core Module
-│   ├── lexicon/           # Lexicon files (.lexc)
-│   ├── rules/             # FST rules (.xfst)
-│   └── compiled/          # Compiled .hfst files
-├── backend/               # FastAPI Backend
-├── frontend/              # Web Interface
-└── docs/                  # Documentation
+trmorph-hfst/
+├── fst/
+│   ├── lexicon/     # Kök sözlükler (.lexc)
+│   ├── rules/       # Morfolojik kurallar (.twol)
+│   └── compiled/    # Derlenmiş FST dosyaları
+├── backend/
+│   ├── api/         # REST API endpoints
+│   ├── core/        # HFST wrapper
+│   └── tests/       # Unit tests
+├── frontend/        # Web arayüzü
+└── docs/            # Dokümantasyon
 ```
 
-## 🚀 Hızlı Başlangıç
+## 🚀 Kurulum
 
 ```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/turkish-morphology-fst.git
-cd turkish-morphology-fst
+# WSL gerekli (Windows)
+wsl --install
 
-# Start with Docker
-docker-compose up -d
+# HFST kurulumu
+sudo apt install hfst hfst-dev
 
-# Or run locally
-cd backend && pip install -r requirements.txt && uvicorn main:app --reload
+# Derleme
+make
 ```
 
-## 📖 API Kullanımı
+## 📚 Referanslar
 
-### Morfolojik Analiz
+- [TRmorph](https://github.com/coltekin/TRmorph) - Türkçe morfolojik analizör
+- [MorAz](https://github.com/berkeozenc/MorAz) - Azerbaycan Türkçesi analizör
+- [HFST](https://github.com/hfst/hfst) - Helsinki Finite-State Technology
 
-```bash
-curl -X POST http://localhost:8000/api/analyze \
-  -H "Content-Type: application/json" \
-  -d '{"word": "evlerimizden"}'
-```
+## 👥 Katkıda Bulunanlar
 
-### Morfolojik Üretim
-
-```bash
-curl -X POST http://localhost:8000/api/generate \
-  -H "Content-Type: application/json" \
-  -d '{"lemma": "ev", "tags": ["N", "Pl", "P1pl", "Abl"]}'
-```
-
-## 🛠️ Teknoloji Stack
-
-- **FST Framework**: HFST (Helsinki Finite-State Technology)
-- **Backend**: FastAPI (Python)
-- **Frontend**: Next.js (React)
-- **Containerization**: Docker
-
-## 📅 Roadmap
-
-- [x] Proje planlaması
-- [ ] FST lexicon ve kuralları
-- [ ] Backend API
-- [ ] Frontend UI
-- [ ] Production deployment
+- [@TurkishKEBAB](https://github.com/TurkishKEBAB)
+- [@berkeozenc](https://github.com/berkeozenc) - Danışman
 
 ## 📄 Lisans
 
 MIT License
-
-## 👥 Contributors
-
-- [Berke Hoca ile ortak proje]
